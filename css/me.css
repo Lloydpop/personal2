@@ -503,7 +503,7 @@ ul{
     display: inline-block;
     margin-bottom: 20px;
     transform: translateY(200%);
-    opacity: 0;
+    opacity: 1;
     position: relative;
     overflow: hidden;
 }
@@ -812,6 +812,10 @@ ul{
     width: fit-content;
     margin: auto;
     overflow: hidden;
+}
+.title a{
+    text-decoration: none;
+    color: #fff;
 }
 .sections .title:nth-child(3){
     transition-delay: 1s;

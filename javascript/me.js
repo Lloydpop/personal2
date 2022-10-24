@@ -108,7 +108,7 @@ window.addEventListener("scroll",()=>{
     const scrollView=document.querySelectorAll(".scroll")
     scrollView.forEach(function(view){
         let scrollHeight=view.getBoundingClientRect().height
-        if(window.scrollY>scrollHeight-70){
+        if(window.scrollY>scrollHeight){
             view.classList.add("active")
             eye.classList.add("active")
         }

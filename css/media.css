@@ -36,6 +36,17 @@
         position: relative;
         overflow: hidden;
     }
+    .vid{
+        display: none;
+    }
+    .title{
+        font-size: 3rem;
+        background-color: #fff;
+        width: 250px;
+    }
+    .title a{
+        color: #000;
+    }
 }
 @media screen  and (min-width:1000px){
     .after-tag{
