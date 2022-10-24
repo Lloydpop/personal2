@@ -36,16 +36,37 @@
         position: relative;
         overflow: hidden;
     }
+    .nav-section .logo-header h1{
+        transform:translateY(-100);
+        transition: 3s;
+      }
+      .nav-section.active .logo-header h1{
+          transform:translateY(0);
+      }
     .vid{
         display: none;
     }
+    .sections.active .title{
+        transform: translateY(0);
+    }
     .title{
+        transition: 2s;
         font-size: 3rem;
-        background-color: #fff;
-        width: 250px;
+        margin-bottom: 50px;
+        font-family: 'Bodoni Moda',serif;
+        margin-bottom: 30px;
+        transform: translateY(200%);
+        overflow: hidden;
+        background-color:rgba(128, 128, 128, 0.151);
     }
     .title a{
-        color: #000;
+        color: #fff;
+    }
+    .ctt{
+        transform: translateY(300%);
+    }
+    .sections.active .ctt{
+        transform: translateY(0);
     }
 }
 @media screen  and (min-width:1000px){

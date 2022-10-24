@@ -859,7 +859,6 @@ ul{
     transition: 2s;
     transform: translateY(100%) scale(0.4);
 }
-
 .tag1{
     transition: 1s;
     opacity: 0;
