@@ -64,6 +64,7 @@
     }
     .ctt{
         transform: translateY(300%);
+        max-width: 500px;
     }
     .sections.active .ctt{
         transform: translateY(0);

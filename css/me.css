@@ -848,7 +848,7 @@ ul{
 }
 .ctt{
     background-color:#000;
-    width: 80%;
+    max-width:500px;
     padding: 19px;
     margin-top: 10px;
     box-shadow: 2px 2px 2px #000 inset;
