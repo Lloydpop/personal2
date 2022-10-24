@@ -826,13 +826,8 @@ ul{
 .sections .title:nth-child(7){
     transition-delay:2.9s;
 }
-.sections .title{
-    transform:scale(0);
-    transition: 1s;
-}
-.sections.active .title{
-    transform:scale(100%);
-}
+
+
 .header h1:hover{
     opacity: 0.8;
 }

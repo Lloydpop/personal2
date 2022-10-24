@@ -90,4 +90,11 @@
     #contact.after-tag::after{
         content:"</contact>";
     }
+    .sections .title{
+        transform:scale(0);
+        transition: 1s;
+    }
+    .sections.active .title{
+        transform:scale(100%);
+    }
 }
