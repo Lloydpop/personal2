@@ -811,6 +811,7 @@ ul{
     border-bottom: 2px solid #fff;
     width: fit-content;
     margin: auto;
+    margin-bottom: 30px;
     overflow: hidden;
 }
 .title a{
@@ -826,6 +827,10 @@ ul{
 .sections .title:nth-child(7){
     transition-delay:2.9s;
 }
+.sections .title:nth-child(9){
+    transition-delay:3.2s;
+}
+
 
 
 .header h1:hover{
@@ -834,10 +839,11 @@ ul{
 .start-pro{
     width: 70%;
     transition: 2s;
-    transform: scale(0);
+    transform:translateY(200%);
+    overflow: hidden;
 }
 .sections.active .start-pro{
-    transform: scale(100%);
+    transform: translateY(0);
     transition-delay: 1s;
 }
 .start-pro h1{

@@ -26,7 +26,7 @@
         font-size: 1.3rem;
     }
     .intro p{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         letter-spacing: 1px;
         transition:1s;
         display: inline-block;
@@ -57,7 +57,8 @@
         margin-bottom: 30px;
         transform: translateY(200%);
         overflow: hidden;
-        background-color:rgba(128, 128, 128, 0.151);
+        box-shadow: 0 0 13px rgba(128, 128, 128, 0.377);
+        background-color:rgba(128, 128, 128, 0.055);
     }
     .title a{
         color: #fff;
@@ -68,6 +69,30 @@
     }
     .sections.active .ctt{
         transform: translateY(0);
+    }
+    .circular-skill{
+        transform: translateY(700%);
+    }
+    .sections.active .circular-skill{
+        transform: translateY(0);
+        transition: 1s;
+        transition-delay:0.5s;
+    }
+    .skills-list{
+        transform:translateY(300%);
+        transition-delay: 1s;
+    }
+    .sections.active .skills-list{
+        transform: translateY(0);
+        transition-delay: 1s;
+    }
+    .hero .cv{
+        transform: translateY(100%);
+        transition:1s;
+    }
+    .hero.active .cv{
+        transform: translateY(0);
+        transition-delay: 1s;
     }
 }
 @media screen  and (min-width:1000px){
