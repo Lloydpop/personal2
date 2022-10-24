@@ -94,6 +94,14 @@
         transform: translateY(0);
         transition-delay: 1s;
     }
+    .fixed-nav .socials img{
+        transform: translateY(200%);
+        transition: 1s;
+      }
+      .fixed-nav.active .socials img{
+        transform: translateY(0);
+        transition-delay: 1s;
+      }
 }
 @media screen  and (min-width:1000px){
     .after-tag{
