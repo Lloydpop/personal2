@@ -57,11 +57,67 @@
         margin-bottom: 30px;
         transform: translateY(200%);
         overflow: hidden;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        border-bottom: black 3px solid ;
         box-shadow: 0 0 13px rgba(128, 128, 128, 0.377);
         background-color:rgba(128, 128, 128, 0.055);
     }
-    .title a{
+    .title::after{
+        z-index: -1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: 1s;
+        background-color: #fff;
+    }
+    .title:hover::after{
+        top: -100%;
+    }
+    .title:hover a{
         color: #fff;
+        position: relative;
+    }
+    .title:hover::before{
+        color: #fff;
+    }
+    .title::before{
+        content: "[01]";
+        top: 20px;
+        right:30px;
+        position: absolute;
+        font-size: 1rem;
+        color: #000;
+        transition: 1s;
+        z-index: 777;
+    }
+    .title:nth-child(3)::before{
+        content: "[02]";
+       
+    }
+    .title:nth-child(5):before{
+        content: "[03]";
+       
+    }
+    .title:nth-child(7):before{
+        content: "[04]";
+      
+    }
+    .title:nth-child(9):before{
+        content: "[05]";
+    }
+    .title a{
+        color: #000;
+        transition: 1s;
     }
     .ctt{
         transform: translateY(300%);
@@ -72,11 +128,13 @@
     }
     .circular-skill{
         transform: translateY(700%);
+        transition: 4s ease-in-out;
+        background-color: #fff;
     }
     .sections.active .circular-skill{
         transform: translateY(0);
-        transition: 1s;
-        transition-delay:0.5s;
+        background-color: transparent;
+        transition: 4s;
     }
     .skills-list{
         transform:translateY(300%);
@@ -101,6 +159,9 @@
       .fixed-nav.active .socials img{
         transform: translateY(0);
         transition-delay: 1s;
+      }
+      .cursor{
+        display: none;
       }
 }
 @media screen  and (min-width:1000px){

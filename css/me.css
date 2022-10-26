@@ -87,8 +87,9 @@ html{
     left: 0;
     width: 100%;
     z-index: 3780;
+    overflow: hidden;
     background-color: #000;
-    box-shadow: 0 0 3px gray;
+    box-shadow: 0 0 2px gray;
 }
 .nav-section .time{
     transform: translateX(200%);
@@ -507,6 +508,7 @@ ul{
     margin-bottom: 20px;
     transform: translateY(200%);
     opacity: 1;
+    font-family: 'Bodoni Moda',serif;
     position: relative;
     overflow: hidden;
 }
@@ -775,11 +777,13 @@ ul{
 
 .skill-text{
     position: absolute;
-    top: 50%;
-    left: 30%;
+    top: 40%;
+    left: 15%;
     text-transform: capitalize;
     font-size: 1.4rem;
     letter-spacing: 0.04rem;
+    overflow: hidden;
+    z-index: -1;
 }
 .skills-list{
     width: 70%;
@@ -829,10 +833,10 @@ ul{
     transition-delay:1.5s;
 }
 .sections .title:nth-child(7){
-    transition-delay:2.9s;
+    transition-delay:2s;
 }
 .sections .title:nth-child(9){
-    transition-delay:3.2s;
+    transition-delay:2.5s;
 }
 
 
@@ -1145,3 +1149,7 @@ footer{
 .buy-me p{
     letter-spacing: 1px;
 }
+.header h1 img{
+    margin-top: -10px;
+    margin-left: 5px;
+  }
