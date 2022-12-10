@@ -146,22 +146,29 @@ lins.forEach(function(lin){
     lin.addEventListener("click", function(e){
         e.preventDefault()
         const clipper =document.querySelector(".clipper")
+        const cliptext =document.querySelector(".clip-text")
         clipper.classList.add("active")
+        cliptext.classList.add("active")
         fixedMenu.classList.remove("active")
         setTimeout(function(){
             clipper.classList.remove("active")
+            cliptext.classList.remove("active")
             hamBugar.classList.remove("active")
             document.body.style.overflowY="visible"
         },2000)
-        
+   const clip=document.querySelector(".clip")
     const id=e.currentTarget.getAttribute("href").slice(1)
     const sections=document.getElementById(id)
     const navSection=document.querySelector(".nav-section")
     let navHeight=navSection.getBoundingClientRect().height
     let position=sections.offsetTop-navHeight
-    window.scrollTo({
-        left:0,
-        top:position
-    })
+    
+    clip.innerHTML=`${id}.`
+    setTimeout(function(){
+        window.scrollTo({
+            left:0,
+            top:position
+        })
+    },1000)
     })
 })

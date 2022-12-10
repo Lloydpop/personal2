@@ -9,7 +9,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ a h1:hover{
+  animation: rll 1s linear  ;
+}
+@keyframes rll {
+    50%{
+        transform: translateY(-10px) rotateX(10deg);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: 3px;
+}
 body{
    background-color: #000;
    color: #fff;
@@ -235,8 +252,11 @@ html{
     overflow: hidden;
     border-bottom-left-radius: 120px;
 }
+.pd{
+    font-size: 1.6rem;
+}
 .fixed-nav.active{
-  height: 70vh;
+  height:470px;
 }
 .fixed-nav .link-container{
     overflow: hidden;
@@ -552,37 +572,47 @@ a:hover{
 .clipper{
     position: fixed;
     bottom: 0;
+    font-family: 'Raleway', sans-serif;
     left: 0;
     height: 100%;
     width: 100%;
     clip-path: circle(0% at 0 0);
-    background-color: #fff;
+    background-color: #000;
     z-index: 6790;
-    transition: 2s;
+    transition: 0.9s ease-in-out;
     overflow: hidden;
-
+}
+.clip{
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Bodoni Moda',serif;
+    letter-spacing:1px;
 
 }
-
 .clipper.active{
     clip-path:circle( 200% at 0 0);
 }
-.clip{
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    width: 80px;
-    height: 80px;
-    background-image: url(/image11/load4.GIF);
-    background-size: cover;
-    background-position: center;
-    border: 3px solid #312e1d;
-    border-radius: 40%;
-    color: #000;
+.clip-text::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:0;
+    background-color:purple;
+    transition:1s ease-in-out;
+}
+.clip-text.active::after{
+    width: 100%;
 }
 .clip-text{
-    color: #000;
-    font-size: 1.2rem;
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 600;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.486);
+    height: 4px;
+    border-radius: 12px;
 }
 .vid{
     margin: auto;
@@ -1175,7 +1205,6 @@ footer .time{
     z-index: 666;
 }
 .fixed-more h1, .ll{
-    text-align: center;
     font-weight: 700;
     font-size: 2.3rem;
 }

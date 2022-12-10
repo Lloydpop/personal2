@@ -140,6 +140,28 @@
 .fixed-more .len{
     width: 100%;
 }
+.c-btn a{
+    width: 130px;
+    font-size: 1rem;
+    padding: 10px;
+}
+.pd{
+    font-size: 1.1rem;
+}
+.pro-c{
+    min-height: 290px;
+    width: 93%;
+    margin: auto;
+}
+.pro-c h1{
+    font-size: 2.5rem;
+}
+.title{
+    width: 93%;
+}
+.clip{
+    font-size: 1.7rem;
+}
 }
 
 @media screen  and (min-width:1000px){
