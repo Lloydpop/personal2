@@ -67,12 +67,10 @@ hamBugar.addEventListener("click",()=>{
     if(fixedMenu.classList.contains("active")){
         fixedMenu.classList.remove("active")
         setTimeout(function(){
-            document.body.style.overflowY="visible"
         },1000)
     }
     else{
         fixedMenu.classList.add("active")
-        document.body.style.overflowY="hidden"
         
     }
 
@@ -123,20 +121,15 @@ window.addEventListener("scroll",()=>{
         if(windowHeight>sectTop){
             sect.classList.add("active")
         }
-        else{
-            sect.classList.remove("active")
-        }
     })
     const ctt=document.querySelector(".tag1")
     let cttHeight=ctt.getBoundingClientRect().top
     if(window.scrollY>cttHeight){
         ctt.classList.add("active")
-        eye.style.backgroundColor="#000"
         cusor.style.borderColor="#000"
     }
     else{
         ctt.classList.remove("active")
-        eye.style.backgroundColor="#fff"
         cusor.style.borderColor="#fff"
     }
 })
@@ -172,68 +165,19 @@ lins.forEach(function(lin){
     })
     })
 })
-const isEmailValid = (email) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-};
-const names=document.querySelector("#name")
-const email=document.querySelector("#email")
-const form=document.querySelector("form")
-const textarea=document.querySelector("#messages")
-form.addEventListener("submit",()=>{
-    checkInputValidation()
+const bc=document.querySelector(".bc")
+const fm=document.querySelector(".fixed-more")
+const addm=document.querySelector(".add-more")
+const mr=document.querySelector(".more")
+let fmHeight=fm.getBoundingClientRect().height
+let addmHeight=addm.getBoundingClientRect().height
+bc.addEventListener("click", function(){
+   fm.style.height=0
+   fm.style.opacity="0"
 })
-function checkInputValidation(){
-    const nameval=names.value.trim()
-    const emailval=email.value.trim()
-    const mval=textarea.value.trim()
-    if(nameval===""){
-        setError(names,"please enter your first name")
+mr.addEventListener("click", function(){
+    if(fmHeight===0){
+        fm.style.height=`${addmHeight}px`
+        fm.style.opacity="1"
     }
-    else{
-        setSuccess(names, "")
-    }
-    if(mval===""){
-        setError(textarea,"message field cannot be empty")
-    }
-    else if(mval.length<30){
-        setError(textarea,"message should be be atleast 30 words long")
-    }
-    else{
-        setSuccess(textarea, "")
-    }
-    if(emailval===""){
-        setError(email,"email should not be empty")
-    }
-    else if(!isEmailValid(emailval)){
-        setError(email,"not a valid email")
-    }
-    else{
-        setSuccess(email,"")
-        if(emailval !=="" && isEmailValid(emailval) && nameval !=="" && mval !=="" && mval.length>30){
-            const info=document.querySelector(".info")
-            info.classList.add("active")
-            setTimeout(function(){
-                info.classList.remove("active")
-            },2000)
-          }
-    }
-}
-
-
-function setError(input,message){
-    const formControl=input.parentElement
-    const errorMe=formControl.querySelector(".error")
-    errorMe.innerText=message
-    formControl.classList.remove("success")
-    formControl.classList.add("error")
-   
-   }
-   function setSuccess(input,message){
-       const formControl=input.parentElement
-       const errorMe=formControl.querySelector(".error")
-       errorMe.innerText=message
-       formControl.classList.add("success")
-       formControl.classList.remove("error")
-      
-}
+ })

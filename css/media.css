@@ -10,6 +10,10 @@
     .ham-bugar span{
         width: 35px;
     }
+    .ham-bugar.active span:nth-child(1){
+        transform:translateY(6px) rotate(35deg);
+        width: 35px;
+    }
     .ham-bugar{
         margin-left: 0;
     }
@@ -17,14 +21,13 @@
         border: none;
     }
     .fixed-nav .link-container ul li a{
-        font-size: 2rem;
+        font-size: 1.3rem;
+        font-weight: 600;
     }
     .header h1 span{
         font-size: 3rem;
     }
-    .intro p{
-        font-size: 1.3rem;
-    }
+
     .intro p{
         font-size: 1.5rem;
         letter-spacing: 1px;
@@ -53,39 +56,12 @@
         transition: 2s;
         font-size: 3rem;
         margin-bottom: 50px;
-        font-family: 'Bodoni Moda',serif;
+        font-family: 'Raleway', sans-serif;
         margin-bottom: 30px;
-        transform: translateY(200%);
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 200px;
-        padding: 10px;
-        border-radius: 10px;
-        border-bottom: black 3px solid ;
-        box-shadow: 0 0 13px rgba(128, 128, 128, 0.377);
-        background-color:rgba(128, 128, 128, 0.055);
+        border-bottom: 0;
     }
-    .title::after{
-        z-index: -1;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        transition: 1s;
-        background-color: #fff;
-    }
-    .title:hover::after{
-        top: -100%;
-    }
-    .title:hover a{
+    .title a{
         color: #fff;
-        position: relative;
     }
     .title:hover::before{
         color: #fff;
@@ -115,35 +91,7 @@
     .title:nth-child(9):before{
         content: "[05]";
     }
-    .title a{
-        color: #000;
-        transition: 1s;
-    }
-    .ctt{
-        transform: translateY(300%);
-        max-width: 500px;
-    }
-    .sections.active .ctt{
-        transform: translateY(0);
-    }
-    .circular-skill{
-        transform: translateY(700%);
-        transition: 4s ease-in-out;
-        background-color: #fff;
-    }
-    .sections.active .circular-skill{
-        transform: translateY(0);
-        background-color: transparent;
-        transition: 4s;
-    }
-    .skills-list{
-        transform:translateY(300%);
-        transition-delay: 1s;
-    }
-    .sections.active .skills-list{
-        transform: translateY(0);
-        transition-delay: 1s;
-    }
+    
     .hero .cv{
         transform: translateY(100%);
         transition:1s;
@@ -164,53 +112,50 @@
         display: none;
       }
 }
+@media screen  and (max-width:600px){
+   .intro p{
+    font-size: 1rem;
+    font-weight: 400;
+   }
+   .fixed-more p{
+    font-size: 1rem;
+   }
+   .more{
+    padding:9px;
+    width: 100px;
+   }
+   .more span{
+    font-size: 1rem;
+   }
+   .cv{
+    width: 150px;
+    font-size: 1rem;
+}
+.intro{
+    width: 93%;
+}
+.fixed-more{
+    width: 93%;
+}
+.fixed-more .len{
+    width: 100%;
+}
+}
+
 @media screen  and (min-width:1000px){
-    .after-tag{
-        position: relative;
-    }
-    .after-tag::before{
-        content: "<body>";
-        font-size: 1rem;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        font-style: italic;
-        font-weight: 600;
-        font-family: 'Bodoni Moda',serif;
-    }
-    .after-tag::after{
-        content: "</body>";
-        position: absolute;
-        left: 0;
-        bottom:-5px;
-        font-size:1rem;
-        font-family: 'Bodoni Moda',serif;
-        font-style: italic;
-        font-weight: 600;
-    }
-    #about.after-tag::before{
-        content:"<about>";
-    }
-    #work.after-tag::before{
-        content:"<work>";
-    }
-    #contact.after-tag::before{
-        content:"<contact>";
-    }
-    #about.after-tag::after{
-        content:"</about>";
-    }
-    #work.after-tag::after{
-        content:"</work>";
-    }
-    #contact.after-tag::after{
-        content:"</contact>";
-    }
+   
     .sections .title{
         transform:scale(0);
         transition: 1s;
     }
     .sections.active .title{
         transform:scale(100%);
+    }
+    .ww{
+        width: 80%;
+        margin: auto;
+    }
+    .pro-c h1{
+        font-size: 4rem;
     }
 }
