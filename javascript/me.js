@@ -165,19 +165,3 @@ lins.forEach(function(lin){
     })
     })
 })
-const bc=document.querySelector(".bc")
-const fm=document.querySelector(".fixed-more")
-const addm=document.querySelector(".add-more")
-const mr=document.querySelector(".more")
-let fmHeight=fm.getBoundingClientRect().height
-let addmHeight=addm.getBoundingClientRect().height
-bc.addEventListener("click", function(){
-   fm.style.height=0
-   fm.style.opacity="0"
-})
-mr.addEventListener("click", function(){
-    if(fmHeight===0){
-        fm.style.height=`${addmHeight}px`
-        fm.style.opacity="1"
-    }
- })
