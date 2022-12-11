@@ -707,6 +707,9 @@ a:hover{
     letter-spacing: 0.06rem;
     transition: 0.5s;
 }
+.modals a{
+    color: purple;
+}
 .about{
     position: relative;
 }
