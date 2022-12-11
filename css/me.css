@@ -1268,6 +1268,9 @@ footer .time{
     opacity: 1;
     transform:translateX(0) ;
 }
+.lp{
+    overflow: hidden;
+}
 .lp.sk{
     transition: 0.5s;
 }
