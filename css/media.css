@@ -41,7 +41,7 @@
         overflow: hidden;
     }
     .nav-section .logo-header h1{
-        transform:translateY(-100);
+        transform:translateY(-300);
         transition: 3s;
       }
       .nav-section.active .logo-header h1{
@@ -49,9 +49,6 @@
       }
     .vid{
         display: none;
-    }
-    .sections.active .title{
-        transform: translateY(0);
     }
     .title{
         transition: 2s;
@@ -112,6 +109,9 @@
       .cursor{
         display: none;
       }
+      .soc a{
+        margin-left: 12px;
+      }
 }
 @media screen  and (max-width:600px){
    .intro p{
@@ -167,17 +167,26 @@
     font-size: 1.15rem;
     color: rgba(255, 255, 255, 0.726);
 }
+
+.hero h1{
+    transform: translateY(100%);
+}
+.hero.active h1{
+    transform: translateY(0);
+}
+.nav-section .logo-header h1{
+    transform:translateY(-300);
+    transition: 3s;
+    opacity: 0;
+  }
+  .nav-section.active .logo-header a h1{
+      transform:translateY(0);
+      opacity: 1;
+  }
 }
 
 @media screen  and (min-width:1000px){
    
-    .sections .title{
-        transform:scale(0);
-        transition: 1s;
-    }
-    .sections.active .title{
-        transform:scale(100%);
-    }
     .ww{
         width: 80%;
         margin: auto;

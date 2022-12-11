@@ -82,15 +82,16 @@ html{
     box-shadow: 0 0 2px gray;
 }
 .nav-section .time{
-    transform: translateX(200%);
-    transition: 1s;
+    transform: translateY(-300%);
+    transition: 1.2s;
     transition-delay: 1s;
     font-family: 'Bodoni Moda' serif;
     font-weight: 900;
+    overflow: hidden;
     
 }
 .nav-section.active .time{
-    transform: translateX(0);
+    transform: translateY(0);
 }
 .nav-section .logo-header a {
     text-decoration: none;
@@ -113,6 +114,11 @@ html{
 .ham-bugar{
     cursor: pointer;
     margin-left: 85px;
+    transition: 1s ease-in-out;
+    transform: translateY(-300%);
+}
+.nav-section.active .ham-bugar{
+ transform: translateY(0);
 }
 .ham-bugar span{
     border-top: 3px solid #fff;
@@ -144,9 +150,10 @@ html{
     z-index: 1;
 }
 .hero h1{
-    letter-spacing: -0.2rem;
+    letter-spacing: 0.3rem;
     font-size: 5rem;
     font-weight: 900;
+    overflow: hidden;
 }
 @keyframes letter{
     50%{
@@ -163,10 +170,6 @@ html{
 .hero.active .cv{
     transform: scale(100%);
     transition-delay: 1s;
-}
-.hero.active h1{
-    letter-spacing: 0.3rem;
-    animation:letter 4s linear  ;
 }
 .r-h{
     transform:  translateX(200%);
@@ -248,7 +251,8 @@ html{
     z-index: 2666;
     padding: 20px;
     transition-duration: 0.8s;
-    transition-delay: 0.5s ;
+    transition-delay: 0.2s ;
+    transition-timing-function: ease-in-out;
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.397) inset;
     overflow: hidden;
     border-bottom-left-radius: 120px;
@@ -270,6 +274,7 @@ ul{
 .fixed-nav .link-container ul li {
     transition: 0.5s;
     margin-bottom: 10px;
+    overflow: hidden;
 }
 .fixed-nav .link-container ul li a{
     margin-bottom: 10px;
@@ -279,8 +284,8 @@ ul{
     font-family: raleway;
     letter-spacing: 2px;
     color: #fff;
-    transition: 2s;
-    transform: translateY(800%) rotate(50deg);
+    transition: 1s ease-in-out;
+    transform: translateY(200%);
 }
 a:hover{
     
@@ -299,7 +304,7 @@ a:hover{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .fixed-nav.fixed-nav.active .link-container ul li a{
-    transform: translateY(0) rotate(0);
+    transform: translateY(0);
 }
 .scroll{
     animation: bouncer 2s infinite;
@@ -552,6 +557,9 @@ a:hover{
     transition: 3s;
     z-index: 7777;
 }
+.sections.active .intro .more{
+    opacity: 1;
+}
 .intro p::after{
     content: "";
     position: absolute;
@@ -560,7 +568,7 @@ a:hover{
     height: 100%;
     width: 100%;
     background-color: #fff;
-    transition: 1s;
+    transition: 1.3s ease-in-out;
 }
 .sections.active .header h1{
     transform: translateY(0);
@@ -619,7 +627,6 @@ a:hover{
 .vid{
     margin: auto;
     width: 70%;
-    transform: scale(0.5) translateY(600px);
     overflow: hidden;
     transition: 2s;
     position: relative;
@@ -683,18 +690,6 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.sections.active .vid:nth-child(4){
-    transition-delay: 0.5s;
-}
-.sections.active .vid:nth-child(6){
-    transition-delay: 1.5s;
-}
-.sections.active .vid:nth-child(8){
-    transition-delay: 2s;
-}
-.sections.active .vid{
-  transform: scale(100%) translateY(0);
 }
 .modals{
     position: absolute;
@@ -806,18 +801,6 @@ a:hover{
     margin-top: 10px;
     font-weight:100;
     color: rgba(255, 255, 255, 0.596);
-}
-.sections .title:nth-child(3){
-    transition-delay: 1s;
-}
-.sections .title:nth-child(5){
-    transition-delay:1.5s;
-}
-.sections .title:nth-child(7){
-    transition-delay:2s;
-}
-.sections .title:nth-child(9){
-    transition-delay:2.5s;
 }
 
 
@@ -1058,6 +1041,8 @@ footer{
    border: 1px solid #fff;
    padding: 14px;
    transition: 0.4s;
+   opacity: 0;
+   transition-delay: 1s;
    cursor: pointer;
   }
   .more:hover{
@@ -1090,31 +1075,35 @@ footer{
     box-shadow:1px 1px 1px rgba(255, 255, 255, 0.596) inset,-1px -1px 1px rgba(255, 255, 255, 0.596) inset ;
     
   }
-  .len.a .inner{
+  .inner{
+    width: 0;
+    transition: 2s ease-in-out;
+  }
+  .len.active.a .inner{
     width: 80%;
     background-color:crimson;
 }
-.len.b .inner{
+.len.active.b .inner{
     width: 60%;
     background-color:#fff;
 }
-.len.c .inner{
+.len.active.c .inner{
     background-color:purple;
     width: 70%;
 }
-.len.d .inner{
+.len.active.d .inner{
     background-color:aqua;
     width: 70%;
 }
-.len.e .inner{
+.len.active.e .inner{
     background-color:rgb(0, 26, 255);
     width: 60%;
 }
-.len.f .inner{
+.len.active.f .inner{
     background-color:#fff;
     width: 80%;
 }
-.len.g .inner{
+.len.active.g .inner{
     background-color:purple;
     width: 70%;
 }
@@ -1198,6 +1187,7 @@ footer .time{
     margin: auto;
     z-index: 666;
 }
+
 .fixed-more h1, .ll{
     font-weight: 700;
     font-size: 2.3rem;
@@ -1240,4 +1230,39 @@ footer .time{
 #dev p{
     line-height: 1rem;
     margin-top: 20px;
+}
+.sk{
+    transform: translateY(100%);
+    transition: 1.2s ease-in;
+    opacity: 0;
+}
+
+.sk.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+.skillp.sk{
+    transform: translateY(50%);
+}
+.skillp.sk.active{
+    transform: translateY(0);
+}
+.title.sk{
+    transform: translateX(500%);
+    transition: 3s ease;
+}
+.title.sk.active{
+   transform: translateX(0);
+}
+#contact.sk{
+    opacity: 0;
+    transition: 4s;
+    transform: translateX(200%);
+}
+#contact.sk.active{
+    opacity: 1;
+    transform:translateX(0) ;
+}
+.lp.sk{
+    transition: 0.5s;
 }

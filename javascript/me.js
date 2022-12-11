@@ -122,16 +122,20 @@ window.addEventListener("scroll",()=>{
             sect.classList.add("active")
         }
     })
-    const ctt=document.querySelector(".tag1")
-    let cttHeight=ctt.getBoundingClientRect().top
-    if(window.scrollY>cttHeight){
-        ctt.classList.add("active")
-        cusor.style.borderColor="#000"
-    }
-    else{
-        ctt.classList.remove("active")
-        cusor.style.borderColor="#fff"
-    }
+    const sk=document.querySelectorAll(".sk")
+    sk.forEach(function(s){
+        let sHeight=s.getBoundingClientRect().top
+        if(window.scrollY>sHeight){
+            s.classList.add("active")
+        }
+    })
+    const line=document.querySelectorAll(".len")
+    line.forEach(function(ls){
+        let lsHeight=ls.getBoundingClientRect().top
+        if(window.scrollY>lsHeight){
+            ls.classList.add("active")
+        }
+    })
 })
 const DisplayGif=document.querySelector("#display-gif")
 const imgMe=["/image11/black (2).JPG","/image11/lloyd.png","/image11/load2.GIF","/image11/load3.GIF","/image11/yellow.JPEG","/image11/load5.JPEG","/image11/cute.PNG","/image11/cute2.PNG","/image11/cc.JPG","/image11/model.JPG"]
