@@ -557,7 +557,7 @@ a:hover{
     transition: 3s;
     z-index: 7777;
 }
-.sections.active .intro .more{
+.sections.active .intro .morer{
     opacity: 1;
 }
 .intro p::after{
@@ -1034,25 +1034,26 @@ footer{
     margin-top: -10px;
     margin-left: 5px;
   }
-  .more{
+  .morer{
     font-family: 'Raleway', sans-serif;
    width:150px;
    text-align: center;
    border: 1px solid #fff;
-   padding: 14px;
    transition: 0.4s;
    opacity: 0;
    transition-delay: 1s;
    cursor: pointer;
   }
-  .more:hover{
+  .morer:hover a{
+    color: #fff;
     background-color: #fff;
-  }
-  .more:hover span{
     color: #000;
   }
-  .more span{
+  .morer a{
+    padding: 14px;
+    text-decoration: none;
     color: #fff;
+    display: block;
     letter-spacing: 2px;
     font-size: 1.5rem;
     font-weight:500;

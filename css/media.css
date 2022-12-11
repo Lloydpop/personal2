@@ -121,11 +121,13 @@
    .fixed-more p{
     font-size: 1rem;
    }
-   .more{
+   .morer a{
     padding:9px;
+   }
+   .morer{
     width: 100px;
    }
-   .more span{
+   .morer a{
     font-size: 1rem;
    }
    .cv{
