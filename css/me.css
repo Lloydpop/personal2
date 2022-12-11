@@ -798,6 +798,7 @@ a:hover{
     font-size: 2rem;
     text-decoration: none;
     color: #fff;
+    display: block;
     font-weight: 600;
 }
 .title p{
@@ -1269,4 +1270,7 @@ footer .time{
 }
 .lp.sk{
     transition: 0.5s;
+}
+.shift{
+    margin-left: 20px;
 }
