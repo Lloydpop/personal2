@@ -90,6 +90,10 @@ html{
     overflow: hidden;
     
 }
+
+ .hero.active .ai{
+    scale:100%;
+}
 .nav-section.active .time{
     transform: translateY(0);
 }
@@ -166,6 +170,7 @@ html{
 .hero .cv{
     transform: scale(0);
     transition:1s;
+    text-align: center;
 }
 .hero.active .cv{
     transform: scale(100%);
@@ -196,6 +201,7 @@ html{
 .left-scroll{
     position:absolute;
     left: 50px;
+    bottom: -230px;
 }
 .left-scroll .line{
     display: block;
@@ -205,6 +211,7 @@ html{
 .right-scroll{
     position: absolute;
     right: 50px;
+    bottom: -230px;
 }
 .right-scroll .line{
     display: block;
@@ -261,7 +268,7 @@ html{
     font-size: 1.6rem;
 }
 .fixed-nav.active{
-  height:470px;
+  height:620px;
 }
 .fixed-nav .link-container{
     overflow: hidden;
@@ -277,6 +284,7 @@ ul{
     overflow: hidden;
 }
 .fixed-nav .link-container ul li a{
+    font-weight: 600;
     margin-bottom: 10px;
     display: inline-block;
     text-decoration: none;
@@ -435,19 +443,19 @@ a:hover{
   .cv{
     border: 1px solid #fff;
     width: fit-content;
-    margin: auto;
     font-family: 'Raleway', sans-serif;
   }
   .cv a:hover{
     background-color:#fff;
     color: #000;
+    font-weight: 600;
+    transition: 0.2s;
   }
 .cv a{
      text-decoration: none;
      color: #fff;
      display: block;
      padding: 10px;
-     transition: 0.4s;
 }
   .hero.active .open::after{
     left: 100%;
@@ -1086,7 +1094,9 @@ footer{
   }
   .len.active.a .inner{
     width: 80%;
-    background-color:crimson;
+    background-image: url(/image11/whity.webp);
+    background-position: center;
+    background-size: cover;
 }
 .len.active.b .inner{
     width: 60%;
@@ -1276,4 +1286,19 @@ footer .time{
 }
 .shift{
     margin-left: 20px;
+}
+.gh.gb{
+    flex-basis: 50%;
+}
+
+.gh img{
+    width: 100%;
+    box-shadow: 0 0 44px #fff;
+    border-radius: 50%;
+}
+.ai{
+    flex-basis: 30%;
+   overflow: hidden;
+   scale:0;
+   transition: 3s;
 }
