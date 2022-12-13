@@ -162,12 +162,13 @@ lins.forEach(function(lin){
         },2000)
    const clip=document.querySelector(".clip")
     const id=e.currentTarget.getAttribute("href").slice(1)
+    let child=e.currentTarget.children[0].innerHTML
     const sections=document.getElementById(id)
     const navSection=document.querySelector(".nav-section")
     let navHeight=navSection.getBoundingClientRect().height
     let position=sections.offsetTop-navHeight
     
-    clip.innerHTML=`${id}.`
+    clip.innerHTML=`${id} ${child} .`
     setTimeout(function(){
         window.scrollTo({
             left:0,

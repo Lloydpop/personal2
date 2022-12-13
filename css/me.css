@@ -92,7 +92,8 @@ html{
 }
 
  .hero.active .ai{
-    scale:100%;
+    transform: translateX(0);
+    opacity: 1;
 }
 .nav-section.active .time{
     transform: translateY(0);
@@ -201,7 +202,7 @@ html{
 .left-scroll{
     position:absolute;
     left: 50px;
-    bottom: -230px;
+    bottom: -420px;
 }
 .left-scroll .line{
     display: block;
@@ -211,7 +212,7 @@ html{
 .right-scroll{
     position: absolute;
     right: 50px;
-    bottom: -230px;
+    bottom: -420px;
 }
 .right-scroll .line{
     display: block;
@@ -436,9 +437,16 @@ a:hover{
 .last{
     overflow: hidden;
 }
-  .open{
+ .hero-text .open{
     position: relative;
     font-family: 'Raleway', sans-serif;
+      opacity: 0;
+    transition-duration: 1.3s;
+    transition-delay: 1.4s;
+    overflow: hidden;
+  }
+  .hero.active .hero-text .open{
+   opacity: 1;
   }
   .cv{
     border: 1px solid #fff;
@@ -1060,6 +1068,7 @@ footer{
     color: #fff;
     background-color: #fff;
     color: #000;
+    font-weight: 600;
   }
   .morer a{
     padding: 14px;
@@ -1069,7 +1078,7 @@ footer{
     letter-spacing: 2px;
     font-size: 1.5rem;
     font-weight:500;
-    transition: 0.4s;
+    transition: 0.2s;
   }
   .skillp{
     font-family: 'Raleway', sans-serif;
@@ -1295,10 +1304,41 @@ footer .time{
     width: 100%;
     box-shadow: 0 0 44px #fff;
     border-radius: 50%;
+    transition: 0.4s;
 }
+.ai:hover::after{
+    content: "[welcome:)]";
+}
+.ai:hover img{
+    box-shadow: none;
+}
+.ai::after{
+    content: "hello";
+    position:absolute ;
+    text-transform: capitalize;
+    text-align: center;
+    top: 15px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+    right: 70px;
+    background-color: #fff;
+    color: #000;
+    width: fit-content;
+    transition: 0.5s;
+}
+
 .ai{
+    position: relative;
     flex-basis: 30%;
    overflow: hidden;
-   scale:0;
+   transform: translateX(200%);
+   opacity: 0;
    transition: 3s;
+}
+.hero-text{
+    overflow: hidden;
+}
+.hero .hero-text h1{
+    transform: translateY(300%);
+    opacity: 1;
 }

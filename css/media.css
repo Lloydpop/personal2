@@ -62,11 +62,12 @@
         color: #fff;
     }
     .title:hover::before{
-        color: #fff;
+        color:purple;
     }
     .title::before{
         content: "[01]";
-        top: 20px;
+        font-weight: 600;
+        top: 12px;
         right:30px;
         position: absolute;
         font-size: 1rem;
@@ -202,6 +203,7 @@ footer{
         width: 80%;
         margin: auto;
     }
+   
     .pro-c h1{
         font-size: 4rem;
     }
@@ -209,5 +211,7 @@ footer{
         width: 86%;
         margin: auto;
     }
-
+    .skill-name{
+        margin-left: -90px;
+      }
 }
