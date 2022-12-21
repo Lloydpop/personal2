@@ -93,7 +93,7 @@ countDown.forEach(function(tim){
 <div class="box">${minute} :</div>
 <div class="box">${seconds}</div>
 </div>
-<h5>lagos nigeria</h5>
+<h5>lagos nigeria <img src="/image11/locate2.png" class="locate"></h5>
 </div>
 `
 })
@@ -177,3 +177,11 @@ lins.forEach(function(lin){
     },1000)
     })
 })
+const DisplayAi=document.querySelector("#artificial")
+const imgArtificial=["/image11/per1.JPG","/image11/per2.JPG","/image11/per4.JPG","/image11/per5.JPG" ,"/image11/ai1.jpeg"]
+
+function rand2(){
+    let randSrc2=Math.floor(Math.random()*imgArtificial.length)
+    DisplayAi.src=imgArtificial[randSrc2]
+}
+setInterval(rand2, 4000)

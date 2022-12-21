@@ -1342,3 +1342,29 @@ footer .time{
     transform: translateY(300%);
     opacity: 1;
 }
+#artificial{
+ animation: arti 4s linear infinite ;
+}
+@keyframes arti{
+    50%{
+       opacity: 0.6;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes loc{
+    50%{
+       transform: translateY(3px);
+    }
+    100%{
+        transform: translateY(-1px);
+    }
+}
+
+
+.locate{
+    width: 20px;
+    filter: brightness(0) invert(1);
+    animation: loc 1.2s infinite;
+}
