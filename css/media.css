@@ -119,6 +119,9 @@
         width: 93%;
         margin: auto;
     }
+    .ai img{
+        box-shadow: none;
+    }
       .hero{
         width: 93%;
         margin: auto;
